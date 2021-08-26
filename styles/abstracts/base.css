@@ -1,0 +1,23 @@
+:root {
+  --primary-mustard: #FFEE7A;
+  --primary-grey: #242424;
+  --nearcut-grey-0: #111111;
+  --nearcut-grey-2: #919191;
+  --nearcut-grey-4: ##E9E9E9;
+  --white: #ffffff;
+}
+
+/* ============================== */
+/* Beginning of Container styling */
+/* ============================== */
+
+.container {
+  background-image:  url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ======================== */
+/* End of Container styling */
+/* ======================== */
+

@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 130%;
+  font-weight: 500;
+  color: var(--primary-grey);
+}
+p {
+  color: var(--primary-grey);
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  line-height: 2.8rem;
+}
