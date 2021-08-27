@@ -1,6 +1,6 @@
-@import url("abstracts/reset.css");
-@import url("abstracts/base.css");
+@import url("./abstracts/reset.css");
+@import url("./abstracts/base.css");
 
-@import url("components/button.css");
-@import url("components/hero.css");
-@import url("components/footer.css");
+@import url("./components/button.css");
+@import url("./components/hero.css");
+@import url("./components/footer.css");
