@@ -1,0 +1,105 @@
+
+/* ================================= */
+/* Beginning of Select input styling */
+/* ================================= */
+
+.select {
+  vertical-align: baseline;
+  position:relative;
+  display:inline-block;
+  width: 100%;
+  padding: 0;
+  height: 7.2rem;
+  border: 0;
+  div {
+    padding:0;
+    background-color: #E9E9E9;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 4rem;
+    min-height: 4rem;
+    transition: max-height 0.2s ease-in-out;
+    position: absolute;
+    border-radius: 0.4rem;
+  }
+  &:after {
+    content: "▾";
+    position: absolute;
+    right: 0.8rem;
+    top: 1.4rem;
+    color: var(--nearcut-grey-0);
+  }
+  &:focus {
+    &:after {
+      color: var(--white);
+    }
+    div {
+      max-height: 10rem;
+      z-index: 1;
+    }
+    input {
+      &:checked + label {
+        color: var(--primary-mustard);
+        background-color: var(--primary-grey);
+        display: block;
+        float: none;
+        padding-left: 0.2rem;
+      }
+    }
+    input[type=checkbox] + label {
+      &:before {
+        content: "";
+      }
+    }
+    label {
+      display: block;
+      float: none;
+      padding-left: 0.2rem;
+    }
+  }
+  legend {
+    display: none;
+    line-height: 2.4rem;
+    margin-bottom: 0.4rem;
+  }
+  label {
+    display: none;
+    background-color: #E9E9E9;
+    line-height: 3.8rem;
+    padding: 0.2rem 0;
+    color: var(--nearcut-grey-0);
+    font-size: 1.4rem;
+    text-align: left;
+    float: left;
+    svg {
+      margin: 0 0.8rem;
+    }
+  }
+  input {
+    display: none;
+    &:first-child + label {
+      padding-left: 0.2rem;
+    }
+    &:checked + label {
+      margin-right: auto;
+      justify-content: flex-start;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+  input[type=checkbox] + label {
+    &:before {
+      content: ", ";
+    }
+  }
+  input[type=checkbox]:first-child + label {
+    &:before {
+      content: "";
+    }
+  }
+}
+
+/* =========================== */
+/* End of Select input styling */
+/* ========================== */

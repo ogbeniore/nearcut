@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -93,6 +94,188 @@ a {
 /* ===================== */
 /* End of Button styling */
 /* ===================== */
+/* ============================= */
+/* Beginning of Checkbox styling */
+/* ============================= */
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  line-height: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-align: left;
+  margin-top: 0.8rem;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background: var(--primary-mustard);
+}
+
+.checkbox input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  background: #E9E9E9;
+  border-radius: 0.2rem;
+}
+
+.checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.6rem;
+  top: 0.1rem;
+  width: 0.8rem;
+  height: 1.4rem;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: var(--primary-grey);
+}
+
+/* ======================= */
+/* End of Checkbox styling */
+/* ======================= */
+/* ================================= */
+/* Beginning of Select input styling */
+/* ================================= */
+.select {
+  vertical-align: baseline;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  height: 7.2rem;
+  border: 0;
+}
+
+.select div {
+  padding: 0;
+  background-color: #E9E9E9;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 4rem;
+  min-height: 4rem;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-in-out;
+  position: absolute;
+  border-radius: 0.4rem;
+}
+
+.select:after {
+  content: "▾";
+  position: absolute;
+  right: 0.8rem;
+  top: 1.4rem;
+  color: var(--nearcut-grey-0);
+}
+
+.select:focus:after {
+  color: var(--white);
+}
+
+.select:focus div {
+  max-height: 10rem;
+  z-index: 1;
+}
+
+.select:focus input:checked + label {
+  color: var(--primary-mustard);
+  background-color: var(--primary-grey);
+  display: block;
+  float: none;
+  padding-left: 0.2rem;
+}
+
+.select:focus input[type=checkbox] + label:before {
+  content: "";
+}
+
+.select:focus label {
+  display: block;
+  float: none;
+  padding-left: 0.2rem;
+}
+
+.select legend {
+  display: none;
+  line-height: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.select label {
+  display: none;
+  background-color: #E9E9E9;
+  line-height: 3.8rem;
+  padding: 0.2rem 0;
+  color: var(--nearcut-grey-0);
+  font-size: 1.4rem;
+  text-align: left;
+  float: left;
+}
+
+.select label svg {
+  margin: 0 0.8rem;
+}
+
+.select input {
+  display: none;
+}
+
+.select input:first-child + label {
+  padding-left: 0.2rem;
+}
+
+.select input:checked + label {
+  margin-right: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select input[type=checkbox] + label:before {
+  content: ", ";
+}
+
+.select input[type=checkbox]:first-child + label:before {
+  content: "";
+}
+
+/* =========================== */
+/* End of Select input styling */
+/* ========================== */
 /* ================================= */
 /* Beginning of Hero section styling */
 /* ================================= */
@@ -191,7 +374,8 @@ a {
   display: block;
 }
 
-.registration__form__item label {
+.registration__form__item > label,
+.registration__form__item legend {
   font-size: 1.4rem;
   line-height: 2.4rem;
   letter-spacing: 0.04em;
@@ -199,7 +383,7 @@ a {
   text-align: left;
 }
 
-.registration__form__item input {
+.registration__form__item > input {
   width: 100%;
   font-size: 1.4rem;
   line-height: 2.4rem;
@@ -211,23 +395,23 @@ a {
   margin: 0.4rem 0 1.6rem;
 }
 
-.registration__form__item input::-webkit-input-placeholder {
+.registration__form__item > input::-webkit-input-placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item input:-ms-input-placeholder {
+.registration__form__item > input:-ms-input-placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item input::-ms-input-placeholder {
+.registration__form__item > input::-ms-input-placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item input::placeholder {
+.registration__form__item > input::placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item input:focus, .registration__form__item input:focus-within {
+.registration__form__item > input:focus, .registration__form__item > input:focus-within {
   outline: 1px solid var(--primary-mustard);
 }
 
@@ -274,15 +458,28 @@ a {
 
 @media screen and (min-width: 767px) {
   .registration {
-    -ms-grid-columns: minmax(36rem, 42.5rem) minmax(30rem, auto);
-        grid-template-columns: minmax(36rem, 42.5rem) minmax(30rem, auto);
+    -ms-grid-columns: minmax(36rem, 42.5rem) minmax(30rem, 45rem);
+        grid-template-columns: minmax(36rem, 42.5rem) minmax(30rem, 45rem);
     max-width: 100rem;
     padding: 4.8rem 4rem;
     padding-bottom: 0;
     grid-column-gap: 3.2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .registration__motivation {
+    margin-top: 0.8rem;
     display: block;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .registration {
+    max-width: 110rem;
+  }
+  .registration__motivation {
+    margin-top: 5.4rem;
   }
 }
 

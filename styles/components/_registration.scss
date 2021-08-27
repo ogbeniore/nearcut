@@ -14,14 +14,15 @@
     text-align: center;
     &__item {
       display: block;
-      label {
+      > label,
+      legend {
         font-size: 1.4rem;
         line-height: 2.4rem;
         letter-spacing: 0.04em;
         display: block;
         text-align: left;
       }
-      input {
+      > input {
         width: 100%;
         font-size: 1.4rem;
         line-height: 2.4rem;
@@ -74,13 +75,21 @@
     }
   }
   @media screen and (min-width: 767px) {
-    grid-template-columns: minmax(36rem, 42.5rem) minmax(30rem, auto);
+    grid-template-columns: minmax(36rem, 42.5rem) minmax(30rem, 45rem);
     max-width: 100rem;
     padding: 4.8rem 4rem;
     padding-bottom: 0;
     grid-column-gap: 3.2rem;
+    justify-content: space-between;
     &__motivation {
+      margin-top: 0.8rem;
       display: block;
+    }
+  }
+  @media screen and (min-width: 1199px) {
+    max-width: 110rem;
+    &__motivation {
+      margin-top: 5.4rem;
     }
   }
 }
