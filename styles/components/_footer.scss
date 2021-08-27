@@ -1,0 +1,65 @@
+/* =================================== */
+/* Beginning of footer section styling */
+/* =================================== */
+
+
+.footer {
+  padding: 8rem 2.4rem 5rem;
+  &__wrapper {
+    background: var(--nearcut-grey-0);
+  }
+  &__content {
+    max-width: 30rem;
+  }
+  &__image {
+    max-width: 12.8rem;
+  }
+  &__text,
+  &__link {
+    margin-top: 1.6rem;
+    display: flex;
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    align-items: center;
+    svg {
+      margin-right: 0.8rem;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: var(--primary-mustard);
+    }
+  }
+  &__socials {
+    margin-top: 7.8rem;
+    &__title {
+      color: var(--primary-mustard);
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.6rem;
+    }
+    &__group {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__link:hover {
+      svg {
+        fill: #FFEE7A;
+      }
+    }
+  }
+  @media screen and (min-width: 767px) {
+    padding-left: 4rem;
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1199px) {
+    padding-left: 12.8rem;
+    max-width: 140rem;
+    margin: 0 auto;
+  }
+}
+
+/* ============================== */
+/* End of footer section styling */
+/* ============================= */

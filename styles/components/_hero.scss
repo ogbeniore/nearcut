@@ -1,0 +1,61 @@
+
+/* ================================= */
+/* Beginning of Hero section styling */
+/* ================================= */
+
+.hero {
+  padding: 4rem 3.2rem 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  .hero__body{
+    max-width: 31.1rem;
+    &__title {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+    }
+    &__desc {
+      margin-bottom: 2.4rem;
+    }
+  }
+  &__media {
+    margin-top: 8rem;
+  }
+  @media screen and (min-width: 767px) {
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.8rem 4rem;
+    max-height: 42rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    &__body__desc {
+      margin-bottom: 1.6rem;
+    }
+    &__media {
+      margin-top: 0;
+      max-width: 32.1rem;
+    }
+  }
+  @media screen and (min-width: 1199px) {
+    padding: 9.2rem 12.8rem 8.6rem;
+    max-height: 66.3rem;
+    max-width: 140rem;
+    &__body{
+      max-width: 44rem;
+      &__title {
+        font-size: 3.8rem;
+        line-height: 4.8rem;
+      }
+      &__desc {
+        margin-bottom: 2.4rem;
+      }
+    }
+    &__media {
+      max-width: 48.1rem;
+    }
+  }
+}
+
+/* =========================== */
+/* End of Hero section styling */
+/* =========================== */
