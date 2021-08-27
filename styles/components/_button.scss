@@ -2,7 +2,7 @@
 /* Beginning of Button styling */
 /* =========================== */
 .btn {
-  border: 1px solid var(--primary-mustard);
+  border: 2px solid var(--primary-mustard);
   color: var(--primary-grey);
   background: var(--primary-mustard);
   font-size: 1.4rem;
@@ -14,9 +14,9 @@
   cursor: pointer;
   transition: all 500ms;
   &:hover {
-    background: var(--primary-grey);
+    background: transparent;
     border-color: var(--primary-grey);
-    color: var(--primary-mustard);
+    color: var(--primary-grey);
     box-shadow: 0 8px 16px rgba(36, 36, 36, 0.25);
   }
   &:focus,

@@ -1,0 +1,90 @@
+/* ========================================= */
+/* Beginning of Registration section styling */
+/* ========================================= */
+
+.registration {
+  display: grid;
+  margin: 0 auto;
+  max-width: 36rem;
+  &__form {
+    padding: 3.2rem 2.4rem;
+    background: var(--primary-grey);
+    color: var(--white);
+    border-radius: 1.6rem;
+    text-align: center;
+    &__item {
+      display: block;
+      label {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.04em;
+        display: block;
+        text-align: left;
+      }
+      input {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        padding: 0.8rem;
+        color: var(--nearcut-grey-0);
+        border-radius: 0.4rem;
+        background: #E9E9E9;
+        border: none;
+        margin: 0.4rem 0 1.6rem;
+        &::placeholder {
+          color: var(--nearcut-grey-2);
+        }
+        &:focus,
+        &:focus-within {
+          outline: 1px solid var(--primary-mustard);
+        }
+      }
+    }
+    &__btn {
+      margin: 3.2rem auto 0.8rem;
+      box-shadow: none;
+      &:hover {
+        color: var(--primary-mustard);
+        border-color: var(--primary-mustard);
+      }
+    }
+  }
+  &__alternate {
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    a {
+      color: var(--primary-mustard);
+      font-weight: 800;
+      &:hover {
+        color: var(--white);
+      }
+    }
+  }
+  &__motivation {
+    display: none;
+    h2 {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      margin-bottom: 1rem;
+      max-width: 30rem;
+    }
+    p {
+      margin-bottom: 2.4rem;
+    }
+  }
+  @media screen and (min-width: 767px) {
+    grid-template-columns: minmax(36rem, 42.5rem) minmax(30rem, auto);
+    max-width: 100rem;
+    padding: 4.8rem 4rem;
+    padding-bottom: 0;
+    grid-column-gap: 3.2rem;
+    &__motivation {
+      display: block;
+    }
+  }
+}
+
+/* =================================== */
+/* End of Registration section styling */
+/* =================================== */

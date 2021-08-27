@@ -63,7 +63,7 @@ a {
 /* Beginning of Button styling */
 /* =========================== */
 .btn {
-  border: 1px solid var(--primary-mustard);
+  border: 2px solid var(--primary-mustard);
   color: var(--primary-grey);
   background: var(--primary-mustard);
   font-size: 1.4rem;
@@ -79,9 +79,9 @@ a {
 }
 
 .btn:hover {
-  background: var(--primary-grey);
+  background: transparent;
   border-color: var(--primary-grey);
-  color: var(--primary-mustard);
+  color: var(--primary-grey);
   -webkit-box-shadow: 0 8px 16px rgba(36, 36, 36, 0.25);
           box-shadow: 0 8px 16px rgba(36, 36, 36, 0.25);
 }
@@ -104,16 +104,16 @@ a {
       grid-template-columns: 1fr;
 }
 
-.hero .hero__body {
+.hero__body {
   max-width: 31.1rem;
 }
 
-.hero .hero__body__title {
+.hero__body__title {
   font-size: 2.4rem;
   margin-bottom: 0.8rem;
 }
 
-.hero .hero__body__desc {
+.hero__body__desc {
   margin-bottom: 2.4rem;
 }
 
@@ -169,11 +169,132 @@ a {
 /* =========================== */
 /* End of Hero section styling */
 /* =========================== */
+/* ========================================= */
+/* Beginning of Registration section styling */
+/* ========================================= */
+.registration {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+.registration__form {
+  padding: 3.2rem 2.4rem;
+  background: var(--primary-grey);
+  color: var(--white);
+  border-radius: 1.6rem;
+  text-align: center;
+}
+
+.registration__form__item {
+  display: block;
+}
+
+.registration__form__item label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.04em;
+  display: block;
+  text-align: left;
+}
+
+.registration__form__item input {
+  width: 100%;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  padding: 0.8rem;
+  color: var(--nearcut-grey-0);
+  border-radius: 0.4rem;
+  background: #E9E9E9;
+  border: none;
+  margin: 0.4rem 0 1.6rem;
+}
+
+.registration__form__item input::-webkit-input-placeholder {
+  color: var(--nearcut-grey-2);
+}
+
+.registration__form__item input:-ms-input-placeholder {
+  color: var(--nearcut-grey-2);
+}
+
+.registration__form__item input::-ms-input-placeholder {
+  color: var(--nearcut-grey-2);
+}
+
+.registration__form__item input::placeholder {
+  color: var(--nearcut-grey-2);
+}
+
+.registration__form__item input:focus, .registration__form__item input:focus-within {
+  outline: 1px solid var(--primary-mustard);
+}
+
+.registration__form__btn {
+  margin: 3.2rem auto 0.8rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.registration__form__btn:hover {
+  color: var(--primary-mustard);
+  border-color: var(--primary-mustard);
+}
+
+.registration__alternate {
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+.registration__alternate a {
+  color: var(--primary-mustard);
+  font-weight: 800;
+}
+
+.registration__alternate a:hover {
+  color: var(--white);
+}
+
+.registration__motivation {
+  display: none;
+}
+
+.registration__motivation h2 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin-bottom: 1rem;
+  max-width: 30rem;
+}
+
+.registration__motivation p {
+  margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: 767px) {
+  .registration {
+    -ms-grid-columns: minmax(36rem, 42.5rem) minmax(30rem, auto);
+        grid-template-columns: minmax(36rem, 42.5rem) minmax(30rem, auto);
+    max-width: 100rem;
+    padding: 4.8rem 4rem;
+    padding-bottom: 0;
+    grid-column-gap: 3.2rem;
+  }
+  .registration__motivation {
+    display: block;
+  }
+}
+
+/* =================================== */
+/* End of Registration section styling */
+/* =================================== */
 /* =================================== */
 /* Beginning of footer section styling */
 /* =================================== */
 .footer {
   padding: 8rem 2.4rem 5rem;
+  margin-top: 6.2rem;
 }
 
 .footer__wrapper {
@@ -239,6 +360,7 @@ a {
     padding-left: 4rem;
     max-width: 100rem;
     margin: 0 auto;
+    margin-top: 7.2rem;
   }
 }
 
@@ -246,7 +368,6 @@ a {
   .footer {
     padding-left: 12.8rem;
     max-width: 140rem;
-    margin: 0 auto;
   }
 }
 
