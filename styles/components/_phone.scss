@@ -1,0 +1,30 @@
+
+/* ================================ */
+/* Beginning of Phone Input styling */
+/* ================================ */
+
+.registration__form__item .phone {
+  display: grid;
+  grid-template-columns: 7.8rem auto;
+  align-items: center;
+  > input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-top: -1.6rem;
+    border-left: 0.1rem solid #BDBDBD;
+  }
+  
+  .select {
+    input + label svg {
+      margin-top: 0.8rem;
+    }
+    div {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+/* ========================== */
+/* Enc of Phone Input styling */
+/* ========================== */

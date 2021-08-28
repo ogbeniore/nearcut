@@ -22,7 +22,8 @@
         display: block;
         text-align: left;
       }
-      > input {
+      > input,
+      .phone > input {
         width: 100%;
         font-size: 1.4rem;
         line-height: 2.4rem;
@@ -37,7 +38,7 @@
         }
         &:focus,
         &:focus-within {
-          outline: 1px solid var(--primary-mustard);
+          outline: none;
         }
       }
     }

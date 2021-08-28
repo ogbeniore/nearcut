@@ -383,7 +383,8 @@ a {
   text-align: left;
 }
 
-.registration__form__item > input {
+.registration__form__item > input,
+.registration__form__item .phone > input {
   width: 100%;
   font-size: 1.4rem;
   line-height: 2.4rem;
@@ -395,24 +396,30 @@ a {
   margin: 0.4rem 0 1.6rem;
 }
 
-.registration__form__item > input::-webkit-input-placeholder {
+.registration__form__item > input::-webkit-input-placeholder,
+.registration__form__item .phone > input::-webkit-input-placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item > input:-ms-input-placeholder {
+.registration__form__item > input:-ms-input-placeholder,
+.registration__form__item .phone > input:-ms-input-placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item > input::-ms-input-placeholder {
+.registration__form__item > input::-ms-input-placeholder,
+.registration__form__item .phone > input::-ms-input-placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item > input::placeholder {
+.registration__form__item > input::placeholder,
+.registration__form__item .phone > input::placeholder {
   color: var(--nearcut-grey-2);
 }
 
-.registration__form__item > input:focus, .registration__form__item > input:focus-within {
-  outline: 1px solid var(--primary-mustard);
+.registration__form__item > input:focus, .registration__form__item > input:focus-within,
+.registration__form__item .phone > input:focus,
+.registration__form__item .phone > input:focus-within {
+  outline: none;
 }
 
 .registration__form__btn {
@@ -571,4 +578,36 @@ a {
 /* ============================== */
 /* End of footer section styling */
 /* ============================= */
+/* ================================ */
+/* Beginning of Phone Input styling */
+/* ================================ */
+.registration__form__item .phone {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 7.8rem auto;
+      grid-template-columns: 7.8rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registration__form__item .phone > input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-top: -1.6rem;
+  border-left: 0.1rem solid #BDBDBD;
+}
+
+.registration__form__item .phone .select input + label svg {
+  margin-top: 0.8rem;
+}
+
+.registration__form__item .phone .select div {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* ========================== */
+/* Enc of Phone Input styling */
+/* ========================== */
 /*# sourceMappingURL=main.css.map */
